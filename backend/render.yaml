@@ -11,6 +11,6 @@ services:
       - key: MONGODB_URI
         value: mongodb+srv://kakkuluruchakradhargoud_db_user:VbYzGtmoMESDWqwx@cluster0.mpv48xf.mongodb.net/user-management?retryWrites=true&w=majority
       - key: JWT_SECRET
-        value: super-secure-jwt-secret-key-for-production-2024-chakri-user-management
+        value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWUsImlhdCI6MTUxNjIzOTAyMn0.KMUFsIDTnFmyG3nMiGM6H9FNFUROf3wh7SmqJp-QV30
       - key: FRONTEND_URL
-        value: https://your-app-name.vercel.app
+        value: https://usermanagementsystem-red.vercel.app
