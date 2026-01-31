@@ -9,8 +9,8 @@ services:
       - key: NODE_ENV
         value: production
       - key: MONGODB_URI
-        sync: false
+        value: mongodb+srv://kakkuluruchakradhargoud_db_user:VbYzGtmoMESDWqwx@cluster0.mpv48xf.mongodb.net/user-management?retryWrites=true&w=majority
       - key: JWT_SECRET
-        sync: false
+        value: super-secure-jwt-secret-key-for-production-2024-chakri-user-management
       - key: FRONTEND_URL
-        sync: false
+        value: https://your-app-name.vercel.app
