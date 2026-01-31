@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Test</title>
+</head>
+<body>
+    <h1>API Connection Test</h1>
+    <button onclick="testAPI()">Test Backend API</button>
+    <div id="result"></div>
+
+    <script>
+        async function testAPI() {
+            const resultDiv = document.getElementById('result');
+            
+            try {
+                console.log('Testing API...');
+                
+                // Test health endpoint
+                const healthResponse = await fetch('https://user-management-system-ldg4.onrender.com/health');
+                const healthData = await healthResponse.json();
+                resultDiv.innerHTML += '<p><strong>Health Check:</strong> ' + JSON.stringify(healthData) + '</p>';
+                
+                // Test API endpoint
+                const apiResponse = await fetch('https://user-management-system-ldg4.onrender.com/api/auth/me', {
+                    credentials: 'include'
+                });
+                const apiData = await apiResponse.json();
+                resultDiv.innerHTML += '<p><strong>API Test:</strong> ' + JSON.stringify(apiData) + '</p>';
+                
+            } catch (error) {
+                resultDiv.innerHTML += '<p><strong>Error:</strong> ' + error.message + '</p>';
+            }
+        }
+    </script>
+</body>
+</html>
